@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git branch: "${env.BRANCH_NAME}", url: 'git@github.com:Muhilan25/Infra-deployment-pipeline.git'
+                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/Muhilan25/Infra-deployment-pipeline.git'
             }
         }
 
