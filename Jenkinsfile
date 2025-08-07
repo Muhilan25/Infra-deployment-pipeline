@@ -43,8 +43,9 @@ pipeline {
 
         stage('Terraform apply') {
             steps {
-                dir("${TF_WORKDIR}")
+                dir("${TF_WORKDIR}") {
                 sh 'terraform apply tfplan'
+            }
             }
         }
     }
