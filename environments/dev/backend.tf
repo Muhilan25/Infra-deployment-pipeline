@@ -5,7 +5,7 @@ terraform {
       version = "4.67.0"
     }
   }
-  backend "remote" {
+  backend "s3" {
     bucket = "lwm-terraform-backend-bucket"
     key = "environments/dev/terraform.tfstate"
     region = "ap-south-1"
