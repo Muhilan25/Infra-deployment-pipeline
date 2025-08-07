@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ENV - "${env.BRANCH_NAME}"
+        ENV = "${env.BRANCH_NAME}"
         TF_WORKDIR = "environments/${env.BRANCH_NAME}"
     }
 
@@ -44,7 +44,7 @@ pipeline {
         stage('Terraform apply') {
             steps {
                 dir("${TF_WORKDIR}")
-                sh 'terraform apply tf plan'
+                sh 'terraform apply tfplan'
             }
         }
     }
